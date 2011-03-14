@@ -1,0 +1,1163 @@
+/* Generic code - used across whole site */
+html
+{
+	height: 100%;
+	margin-bottom: 1px;
+}
+body
+{
+	font-family: verdana, arial, "sans serif";
+	font-size: smaller;
+}
+
+h1
+{
+	font-size: 175%;
+	margin: 0;
+}
+h2
+{
+	font-size: 150%;
+	margin: 0;
+}
+h3
+{
+	font-size: 120%;
+	margin: 0;
+}
+h4
+{
+	font-size: 110%;
+	margin: 0;
+}
+h5
+{
+	font-size: 100%;
+	margin: 0;
+}
+
+p
+{
+	margin: 0.3em;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
+ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+form
+{
+	margin: 0;
+}
+
+a
+{
+	color: #6060c0;
+}
+a:visited
+{
+	color: #9090f0;
+}
+a:focus, a:hover, a:active
+{
+	color: #003099;
+}
+
+abbr
+{
+	border-bottom: 1px black dotted;
+}
+
+img
+{
+	border: none;
+}
+
+.clearRight
+{
+	clear: right;
+}
+.clear
+{
+	clear: both;
+}
+
+.noShow
+{
+	display: none;
+}
+
+.narrow
+{
+	width: 580px;
+	font-size: 80%;
+}
+.wide
+{
+	width: 930px;
+}
+
+
+#mainContent
+{
+	text-align: left;
+	border: 1px #ccc solid;
+	background: url(/images/page_back.gif) repeat-x bottom left;
+	margin: auto;
+	padding: 0.5em 1.5em;
+}
+
+
+.nonLink
+{
+	color: #999;
+}
+
+.input_error
+{
+	background: #ffc0c0;
+}
+
+#loading_bar
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5em;
+	color: #000;
+	background: #C9C9C9;
+	text-align: center;
+	display: none;
+}
+
+
+/* General form components */
+
+label
+{
+	font-weight: bold;
+}
+
+input
+{
+	margin: 0;
+	padding: 0;
+}
+input.number
+{
+	width: 2em;
+	text-align: center;
+}
+input.postcode
+{
+	width: 7em;
+}
+input.national
+{
+	width: 20px;
+	margin-top: 0.1em;
+}
+
+a.helpIcon
+{
+	text-decoration: none;
+}
+
+span.helpPopup
+{
+	visibility: hidden;
+	position: absolute;
+	z-index: 5;
+	margin-left: 0em;
+	margin-bottom: 0em;
+	padding: 0.3em;
+	border: 1px #639 solid;
+	background: #fcf;
+	font-size: 70%;
+	width: 20em;
+	color: #000;
+}
+a.helpIcon > span.helpPopup
+{
+	right: 20em;
+	margin: 0;
+	bottom: 0;
+}
+a.helpIcon:hover
+{
+	cursor: help;
+}
+a.helpIcon:hover span.helpPopup, a.helpIcon:focus span.helpPopup
+{
+	visibility: visible;
+}
+
+
+/*************
+**  Top bar **
+**************/
+
+#findItTitle
+{
+	margin: 1em 0 1em;
+	height: 70px;
+	padding-bottom: 4.5em;
+	overflow: hidden;
+}
+
+#findIt a
+{
+}
+
+#linksBar
+{
+	padding-top: 10px;
+}
+
+#linksBar ul
+{
+	margin: 0;
+}
+#linksBar li
+{
+	display: inline;
+	float: left;
+	margin-right: 0.5em;
+	background: #f0f0f0;
+	margin-bottom: 0em;
+	text-align: center;
+}
+#linksBar li a, #linksBar li span
+{
+	line-height: 2em;
+	padding: 0.5em 1em;
+	background: #f0f0f0;
+	font-weight: bold;
+}
+#linksBar li a.here, #linksBar li span.here
+{
+	background: #c0c0c0;
+	color: #000;
+}
+#linksBar li a:focus, #linksBar li a:hover, #linksBar li a:active
+{
+	background: #c9c9c9;
+}
+
+/* S01 code for freetext search start */
+#linksBar #simpleSearchDiv
+{
+	float: right;
+	margin-right: 0;
+	width: 300px;
+}
+
+#linksBar #simpleSearchDiv label
+{
+	display: block;
+	margin: 0px 0px -5px 28px;
+}
+
+input#searchButton
+{
+	height: 25px;
+	width: 80px;
+	background: url(/images/search.gif) no-repeat 0% 100%;
+	border: none;
+	vertical-align: text-bottom;
+	margin-left: 1em;
+}
+#searchButton:focus, #searchButton:hover
+{
+	background-image: url(/images/search_roll.gif);
+}
+
+#simpleSearchDiv #advSearchLink
+{
+	float: right;
+	font-size: 70%;
+}
+#poweredByIcon
+{
+	margin-bottom: -5px;
+	margin-right: 3px;
+}
+#poweredBy
+{
+	font-size: 70%;
+	color: #999;
+	margin: 0px 0px 0px 28px;
+}
+/* S01 code for freetext search end */
+
+
+/**********************************************************************
+** Top & bottom panes for Advanced Search **
+***********************************************************************/
+
+.headerPane
+{
+	padding: 1em;
+	background: #f0f0f0;
+	border: 1px #cfcfcf solid;
+	border-bottom-style: dashed;
+	text-align: center;
+}
+
+.lowerPane
+{
+	background: #f9f9f9;
+	border: #ccc solid;
+	border-width: 0px 1px 1px;
+	padding: 1em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+
+
+/****************
+** Search Page **
+*****************/
+/* S01 code for freetext search start */
+#searchList
+{
+	text-align: left;
+}
+.simpleSearchDiv
+{
+	margin: auto;
+	width: 40em;
+}
+.simpleSearchDiv label
+{
+	display: block;
+	margin: 0px 0px -5px 27px;
+}
+.simpleSearchDiv #advSearchLink
+{
+	margin-left: 27px;
+}
+#freetext
+{
+	width: 10em;
+	margin: 1em 0em 0em;
+}
+/* S01 code for freetext search start */
+
+
+
+/*******************
+** Directory page **
+********************/
+
+/* Location selector */
+
+#location_screen
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	background: transparent;
+	z-index: 5;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#location_dialog
+{
+	z-index: 10;
+	position: absolute;
+	top: 20em;
+	left: 50%;
+	margin-left: -300px;
+	width: 500px;
+	background: #f0f0f0;
+	border: 1px #999 solid;
+	padding: 2em;
+	text-align: center;
+}
+
+#searchPlace
+{
+	text-align: left;
+}
+#locationInput
+{
+	margin-top: 0.2em;
+}
+#narrowButton
+{
+	width: 138px;
+	height: 32px;
+	overflow: hidden;
+	text-indent: -500px;
+	background: url(/images/narrow.gif) no-repeat 0% 100%;
+	padding-top: 9px;
+	border: none;
+	line-height: 0px;
+	text-align: left;
+	padding-left: 0.75em;
+	font-weight: bold;
+	color: #fff;
+}
+#narrowButton:focus, #narrowButton:hover
+{
+	background-image: url(/images/narrow_roll.gif);
+}
+
+#searchAllButton
+{
+	margin: 2em 0em 0em;
+	text-align: left;
+	font-size: 120%;
+}
+#showAllButton
+{
+	height: 30px;
+	font-size: 140%;
+	text-decoration: none;
+	width: 174px;
+	background: url(/images/show_all.gif) no-repeat 0% 75%;
+}
+#showAllButton img
+{
+	visibility: hidden;
+}
+#showAllButton:focus, #showAllButton:hover
+{
+	background: url(/images/show_all_roll.gif) no-repeat 0% 55%;
+}
+
+#cancelLocation
+{
+	float: right;
+	line-height: 2em;
+}
+#cancelLocation a
+{
+	padding: 0.4em 1em;
+	background: #ddc;
+	border: 1px #ccb solid;
+}
+#cancelLocation a:focus, #cancelLocation a:hover, #cancelLocation a:active
+{
+	background: #c9c9b9;
+	border-color: #bba;
+}
+
+
+/* Main Directory */
+
+.directoryColumn
+{
+	float: left;
+	width: 30%;
+	margin-right: 1em;
+	text-align: left;
+}
+
+.topCat2
+{
+	margin: 1em;
+	padding: 0.7em;
+	background: url(/images/cat_corner.gif) #f0f0f6 no-repeat top right;
+	border-bottom: 1px #c9c9c9 solid;
+}
+.topCat2:hover
+{
+	background: url(/images/cat_corner_roll.gif) #f0f0f6 no-repeat top right;
+	border-color: #9c9cc6;
+}
+
+.browseTerm, .browseTerm:visited
+{
+	font-size: 110%;
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+.browseTerm:focus, .browseTerm:hover
+{
+	color: #003099;
+}
+
+.browseExample
+{
+	display: block;
+	color: #666;
+	font-weight: normal;
+	font-size: 90%;
+}
+
+
+/*******************
+** Tag cloud page **
+********************/
+
+#tag_cloud
+{
+	text-align: center;
+}
+#tag_cloud2
+{
+	margin: auto;
+	width: 35em;
+	line-height: 200%;
+}
+
+.cloudTerm
+{
+	white-space: nowrap;
+}
+
+/********************
+*** Subject Index ***
+*********************/
+
+.indexLetter
+{
+	font-size: 120%;
+}
+.indexColumn
+{
+	float: left;
+	width: 30%;
+	margin-right: 1em;
+	text-align: left;
+}
+
+
+/*************************
+** Advanced Search Page **
+**************************/
+/* S09, S03, S08, L01 code start */
+#advancedList
+{
+	text-align: left;
+}
+
+#formHeader
+{
+	clear: both;
+	margin-top: 0.5em;
+	font-weight: bold;
+}
+
+input#searchTerms
+{
+	width: 20em;
+}
+input#town
+{
+	width: 20em;
+}
+input#postcode
+{
+	width: 15em;
+}
+
+#advSearchForm select
+{
+	width: 17em;
+}
+
+.advSearchDiv
+{
+	margin: 1.5em 0 0 1em;
+	position: relative;
+}
+.advSearchDiv .description
+{
+	float: left;
+	margin-right: 1em;
+	width: 20em;
+}
+#advSearchSubcat .description
+{
+	margin-right: 0;
+}
+
+#vacancies .description
+{
+	width: 20em;
+}
+#provisionList .description
+{
+	width: 18em;
+	float: none;
+}
+
+#nocatOption, .noSubcatOption
+{
+	font-style: italic;
+}
+
+ul.alignedList
+{
+	list-style: none;
+	margin: 0.5em 0 0 2em;
+	padding: 0;
+}
+ul.alignedList span.helpIcon
+{
+	float: none;
+}
+
+#moreOptionsLink
+{
+	display: none;
+}
+
+#searchCluster
+{
+	text-align: right;
+}
+/* S09, S03, S08, L01 code start */
+
+
+/*******************
+** Search Results **
+********************/
+/* U01 breadcrumb trail tool start*/
+#breadcrumb
+{
+	border: 1px #f3f3f3 solid;
+	border-width: 2px 0px;
+	margin: 0 0 0.5em;
+	position: relative;
+	min-width: 16em;
+}
+.searchTerm
+{
+	font-weight: bold;
+}
+/* U01 breadcrumb trail tool end*/
+
+/* R02, R03 code start */
+#resultsNav, #resultsNavBottom
+{
+	padding-bottom: 0.5em;
+	text-align: center;
+	margin: 0em 0em 1em;
+	border-bottom: 1px #696969 dashed;
+	position: relative;
+}
+.navBottom
+{
+	border-top: 1px #696969 dashed;
+}
+
+#perPageSpacer
+{
+	float: left;
+	width: 9.25em;
+	height: 3em;
+}
+#perPageControl
+{
+	float: right;
+	width: 9.25em;
+}
+
+#pageCount
+{
+	margin: 0.5em 0em 0em;
+}
+
+.previous, .next
+{
+	font-size: 110%;
+	font-weight: bold;
+}
+/* R02, R03 code end */
+
+
+/* Side filters */
+/* F02, F06, F07, F08, F09, L01 code start  */
+#filterPanel
+{
+	background: #f6f6f6;
+	border: #f0f0f0;
+	margin-top: 0em;
+	padding: 1em 1em 0em;
+	float: left;
+	width: 15em;
+}
+
+#filterLocation
+{
+	border: 1px #cfcfcf solid;
+	padding: 0.3em;
+}
+#filterLocation h3
+{
+	margin: 0.3em 0em;
+}
+#filterLocation #locationError
+{
+	margin: 0.5em;
+	background: #fc9f9f;
+	border: #0fcccc;
+	font-size: 80%;
+}
+#filterLocationSubmit
+{
+	width: 20px;
+	height: 15px;
+	background: #cfcfcf url(/images/circle-trans.gif) no-repeat 0% 100%;
+}
+#filterLocationHint, #filterLocationNationwide
+{
+	font-size: 80%;
+}
+
+#currentFilters
+{
+	margin: 1em 0em;
+	padding: 0.4em;
+	background: #fcfcfc;
+}
+#currentFilters a
+{
+	background: url(/images/cross.gif) no-repeat;
+	padding-left: 1.5em;
+}
+#currentFilters a:focus, #currentFilters a:hover
+{
+	background: url(/images/cross_roll.gif) no-repeat;
+}
+#currentFilters a img.filterCross
+{
+	display: none;
+}
+
+#availFilters
+{
+	border: 1px #c9c9c9 solid;
+	padding: 0em 0.3em;
+}
+#availFiltersTitle
+{
+	margin: 1em 0em;
+}
+.filterGroup
+{
+	margin: 1em 0em;
+}
+.filterGroup li
+{
+	padding-left: 1em;
+}
+/* F02, F06, F07, F08, F09, L01 code end  */
+
+
+/* Main results area */
+#resultsPanel
+{
+	margin-left: 18em;
+}
+#resultsPanel .no_results
+{
+	margin: 1em;
+	text-align: center;
+}
+
+
+/* L01 code start  */
+#locationDisambiguation
+{
+	margin-bottom: 1em;
+	padding: 1em;
+	background: #f0f0f0;
+	border: 1px #c9c9c9 solid;
+}
+#locationDisambiguation ul
+{
+	margin-left: 1em;
+}
+#locationDisambiguation #currentResults
+{
+	text-align: center;
+}
+/* L01 code end  */
+
+/* Tabs on results */
+#resultsTabs span
+{
+	padding: 0.4em 0em;
+	line-height: 202%;
+	font-weight: bold;
+	color: #000;
+}
+
+#resultsTabs .thisTabLeft
+{
+	background: url(/images/tabLeft.gif) no-repeat top left;
+	border-bottom: 1px #f0f0f0 solid;
+}
+#resultsTabs .thisTabMid
+{
+	padding: 0.4em;
+	background: url(/images/tabMid.gif) repeat-x top left;
+	border-bottom: 1px #f0f0f0 solid;
+}
+#resultsTabs .thisTabRight
+{
+	background: url(/images/tabRight.gif) no-repeat top right;
+	border-bottom: 1px #f0f0f0 solid;
+}
+
+#resultsTabs .tabLeft
+{
+	background: url(/images/tabLeftGrey.gif) no-repeat top left;
+}
+#resultsTabs .tabMid
+{
+	padding: 0.4em;
+	background: url(/images/tabMidGrey.gif) repeat-x top left;
+}
+#resultsTabs .tabRight
+{
+	background: url(/images/tabRightGrey.gif) no-repeat top right;
+}
+.resultsBody
+{
+	background: #f0f0f0;
+	border: 1px #c9c9c9 solid;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.resultsLALogo
+{
+	margin-right: 3px;
+	margin-bottom: 3px;
+	max-height: 50px;
+	max-width: 50px;
+	float: left;
+}
+
+.detailLALogo
+{
+	margin-right: 3px;
+	margin-bottom: 3px;
+	max-height: 50px;
+	max-width: 50px;	
+}
+
+.laLogo
+{
+	display: table;	
+}
+
+.detailsLAName
+{
+	font-weight: bold;
+	color: #888888;
+}
+
+.resultsLAName
+{
+	font-weight: bold;
+	color: #888888;
+	vertical-align: top;
+}
+
+/* U02 Key to icons tool start */
+#key
+{
+	padding: 1em;
+	background: #f9f9f9;
+	border: 1px #f0f0f0 solid;
+	float: right;
+	width: 14em;
+}
+#keyContents .icons
+{
+	padding-left: 40px;
+	padding-top: 2px;
+}
+#keyContents .icons img
+{
+	margin-left: -40px;
+	margin-bottom: -2px;
+}
+/* U02 Key to icons tool end */
+
+
+/* R04 list view tool start */
+#sorting
+{
+	margin-top: 0.5em;
+}
+.currentSort
+{
+	font-weight: bold;
+	color: #999;
+}
+
+#resultsListDiv
+{
+	margin-top: 2em;
+}
+.resultsList
+{
+	list-style: none;
+	margin: 0 2em 0 1em;
+	padding: 0;
+}
+.resultsList li
+{
+	margin: 1em 0;
+	padding-left: 2em;
+}
+.listDiv
+{
+	position: relative;
+}
+.listDiv .mapPin
+{
+	position: absolute;
+	left: -3em;
+}
+.listDiv img
+{
+	display: inline;
+}
+.resultsAddress
+{
+	display: block;
+	margin-left: 2em;
+}
+/* R04 list view tool end */
+
+.resultsTable
+{
+	float: left;
+	width: 98%;
+}
+.resultsTable th, .resultsTable td
+{
+	border: 1px #666 solid;
+	padding: 0.2em;
+}
+
+/* R05 table view tool start */
+td .mapPin
+{
+	padding-right: 0.3em;
+	float: left;
+}
+.cell_description
+{
+	padding: 0.3em;
+	width: 35%;
+}
+.cell_distance, .cell_ages, .cell_national, .cell_facilities, .cell_others
+{
+	text-align: center;
+	min-width: 13%;
+	padding: 0.3em;
+}
+.cell_facilities, .cell_others
+{
+	width: 10%;
+}
+.cell_description h4
+{
+	margin: 0.3em;
+}
+/* R05 table view tool end */
+
+
+/* R06 map view tool start */
+#resultsArea3 .resultsBody
+{
+	text-align: center;
+}
+
+/* Map div used by the mapping software - TAKE CARE IF EDITING THIS */
+#mapDiv
+{
+	text-align: center;
+	background: #f9f9f9;
+	border: 1px #f0f0f0 solid;
+	width: 500px;
+	height: 450px;
+	margin: auto;
+}
+
+/*List of results under the map */
+.mapListDiv
+{
+	position: relative;
+	text-align: left;
+	margin: 1em 0;
+	padding-left: 3em;
+}
+.mapListDiv .mapPin
+{
+	position: absolute;
+	left: -1pt;
+}
+/* R06 map view tool end */
+
+
+
+/*****************
+** Details Page **
+******************/
+/* R07 detail view tool start */
+#profilePane
+{
+	float: left;
+	padding: 1em;
+	border: 1px #cfcfcf solid;
+	background: #f6f9f6;
+	width: 72%;
+}
+
+#broaderCats
+{
+	font-size: 80%;
+	margin: 0.3em 0;
+}
+
+.printLink, .printLink:visited
+{
+	float: right;
+	padding: 0.2em;
+	background: #ddc;
+	border: 1px #ccb solid;
+}
+.printLink:focus, .printLink:hover, .printLink:active
+{
+	background: #c9c9b9;
+	border-color: #bba;
+}
+
+.sidebar
+{
+	float: right;
+	min-height: 100%;
+	width: 14em;
+	padding: 1em;
+	margin-bottom: 1em;
+	background: #f9f9f9;
+	border: 1px #f0f0f0 solid;
+}
+
+.detailsGroup
+{
+	margin: 1em 0em;
+}
+
+.detailsGroup .profileLabel
+{
+	font-weight: bold;
+	margin-left: 0.3em;
+}
+
+.profileNoLabel
+{
+	margin-left: 0.3em;
+}
+
+.sectionHead
+{
+	font-weight: bold;
+	font-size: 110%;
+	color: #804000;
+}
+.address
+{
+	display: block;
+	margin-left: 2em;
+}
+/* R07 detail view tool start */
+
+/* R08 tab tool start */
+#moreDetailsPane
+{
+	margin-top: 1em;
+}
+
+.tab
+{
+	display: inline;
+	padding: 3px 5px;
+	background: #ccc;
+	border: #999 solid;
+	border-width: 1px;
+	font-size: 13px;
+	line-height: 22px;
+}
+.current
+{
+	background: #f0fff9;
+	border-bottom: 1px #f0fff9 solid;
+}
+.tabMain
+{
+	padding: 1em 1.5em 1.5em;
+	border: 1px #999 solid;
+	background: #f0fff9;
+	clear: left;
+}
+
+
+.tabMain .profileLabel
+{
+	margin-left: 0em;
+}
+
+/* Opening times tab */
+#openingDetails table
+{
+	border-collapse: collapse;
+	margin: 0.5em 1em 1em;
+}
+#openingDetails th
+{
+	padding: 0.2em 0.5em;
+	font-weight: bold;
+	border: 1px #666 solid;
+}
+#openingDetails td
+{
+	padding: 0.2em 0.5em;
+	border: 1px #666 solid;
+}
+
+/* Special Provision tab */
+#provisionDetails li
+{
+	margin-left: 2em;
+}
+
+/* Map tab */
+#mapDetails
+{
+	text-align: center;
+}
+/* Map div used by the mapping software - TAKE CARE IF EDITING THIS */
+#mapDetails #mapDiv
+{
+	background: #f9f9f9;
+	border: 1px #f0f0f0 solid;
+	width: 620px;
+	height: 550px;
+	margin: auto;
+}
+/* R08 tab tool end */

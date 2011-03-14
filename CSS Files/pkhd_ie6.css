@@ -1,0 +1,18 @@
+﻿/************************
+** IE6-only Stylesheet **
+*************************/
+
+#findItTitle {padding-bottom: 0px;}
+
+/* R02, R03 code start */
+#resultsNav {background: #fff;}
+/* R02, R03 code end */
+
+/* R06 map view tool start */
+.listDiv .mapPin {top: 20px;}
+
+#filterPanel {zoom: 1;}
+
+.mapListDiv {margin-bottom: 2em;}
+.mapListDiv .mapPin {position: relative; left: -29pt;}
+/* R06 map view tool end */

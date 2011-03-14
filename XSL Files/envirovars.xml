@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<environmentVariables>
+  <pages>
+  <homepage>/toolkit_php/search.php</homepage>
+  <directoryPage>/toolkit_php/directory.php</directoryPage>
+  <indexPage>/toolkit_php/subject_index.php</indexPage>
+  <advsearchPage>/toolkit_php/advanced_search.php</advsearchPage>
+  <resultsPage>/toolkit_php/results.php</resultsPage>
+  <locationPage>/toolkit_php/specify_location.php</locationPage>
+  <detailsPage>/toolkit_php/details.php</detailsPage>
+  </pages>
+  <folders>
+    <resourcesFolder>/toolkit_xsl/</resourcesFolder>
+    <stylesFolder>/toolkit_styles/</stylesFolder>
+    <scriptsFolder>/toolkit_scripts/</scriptsFolder>
+    <imagesFolder>/images/</imagesFolder>
+  </folders>
+  <maps>
+    <!-- Some valid values of mapType are 'google', 'microsoft', 'yahoo', 'openstreetmap' -->
+    <mapType>google</mapType>
+    <API type="google">http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAC6OpstQ6kPTRjguiItFOrxTkKg7oYb-VdK4ySCurh20P8-VaFRQ-z_m-tjdMgCWAnpYKL4b_OOTzDg</API>
+    <API type="microsoft">http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6</API>
+    <API type="yahoo">http://api.maps.yahoo.com/ajaxymap?v=3.0&amp;appid=MapstractionDemo</API>
+    <API type="openstreetmap">http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAYfI_xw3MwUbmAScWsa72VBSeiHve5IwsMuqAjxrbixTJ6mqDsxTZLbNcpVxq9PneOXm7mkBjelEQpw</API>
+  </maps>
+</environmentVariables>

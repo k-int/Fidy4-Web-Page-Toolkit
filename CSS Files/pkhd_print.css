@@ -1,0 +1,18 @@
+#profilePane {
+	width: auto;
+	float: none;
+}
+
+#findItTitle {
+	padding-bottom: 0px;
+}
+
+/* R08 tab tool (print version) start */
+#linksBar, .printLink, .sidebar, #detailsTabs {
+	display: none;
+}
+
+#moreDetails1, #moreDetails2, #moreDetails3, #moreDetails4, #moreDetails5, #moreDetails6, #moreDetails7, #moreDetails8 {
+	display: block !important;
+}
+/* R08 tab tool (print version) end */
